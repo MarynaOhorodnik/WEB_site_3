@@ -1,0 +1,18 @@
+@mixin table_2 {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 450px;
+    background: $background_color_table;
+
+    td{
+        border: 2px solid black;
+    }
+}
+
+@mixin text_3 {
+    background-color: $background_color;
+    align-self: center;
+    font-family: $font_family;
+    font-size: 25px;
+    border-radius: 10px;
+}

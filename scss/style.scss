@@ -1,0 +1,163 @@
+@import "variables";
+@import "mixin";
+
+*{
+    margin: 10px 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../img/background.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+
+header{
+    margin: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;   
+}
+
+#top_img{
+    align-self: center;
+    width: 700px;
+}
+
+.color_table_1{
+    border-spacing: 0px 25px;
+
+    .img_1{
+        width: 70px;
+        height: 69px;
+        background: url(../img/1.png) ;
+    }
+    
+    .img_2{
+        width: 69px;
+        height: 69px;
+        background: url(../img/2.png);
+    }
+    
+    .img_3{
+        width: 68px;
+        height: 69px;
+        background: url(../img/3.png);
+    }
+}
+
+.flex_1{
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+
+    .column_rec{
+        padding: 10px 15px;
+    }
+}
+
+.flex_2{
+    display: flex;
+    flex-wrap: nowrap;
+
+    .colm_tabl{
+        flex: 1 0 50%;
+    }
+}
+
+.flex_2 table{
+    @include table_2;
+}
+
+.flex_3{
+    display: flex;
+    flex-wrap: nowrap;
+
+    .colm_img_1{
+        align-self: center;
+    }
+
+    .colm_img_2{
+        @include text_3;
+    }
+}
+
+.column_rec, table, .text_ft{
+    font-family: $font_family;
+    font-size: $font_size;
+}
+
+h3{
+    font-size: 26px;
+    
+}
+
+h2{
+    font-size: 30px;
+}
+
+h1, h2, .text_ft{
+    text-align: center;
+}
+
+@media (max-device-width : 1000px) and (min-device-width : 481px){
+    .flex_1{
+        flex-wrap:  wrap;
+    }
+
+    .column_rec.spec{
+        flex: 0 0 48%;
+    }
+
+    .flex_2, .flex_3, header{
+        flex-wrap: wrap;
+    }
+
+    .colm_hd{
+        flex: 1 1 100%;
+    }
+
+    #top_img{
+        align-self: center;
+        width: 600px;
+        padding: 10px 10px;
+    }
+
+    .colm_hd, .colm_tabl, .colm_img_1, .colm_img_2{
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+
+    *{
+        margin: 2px 4px;
+    }
+
+}
+
+@media (max-width: 480px){
+    .flex_1, .flex_2, .flex_3, header{
+        flex-wrap: wrap;
+    }
+
+    .colm_hd{
+        flex: 1 1 100%;
+    }
+
+    #top_img{
+        align-self: center;
+        width: 440px;
+    }
+
+    
+
+    .column_rec, .colm_hd, .colm_tabl, .colm_img_1, .colm_img_2{
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+
+    *{
+        margin: 2px 4px;
+    }
+}
